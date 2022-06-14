@@ -1,7 +1,22 @@
-sequence = [4, 3, 5, 0, 1]
-swaps = 0
+def bubble_sort(arr):
+    swaps = 0
+    l, r = 0, 1
 
-# Your Code Here
+    while l < len(arr):
+        while r < len(arr):
+            if arr[l] > arr[r]:
+                swaps += 1
+                arr[l], arr[r] = arr[r], arr[l]
+                
+            r += 1
+        l += 1
+        r = l + 1
 
-print(f"Final result: {result}")
-print(f"Swaps: {swaps}")
+
+
+
+
+
+    return swaps 
+
+print(bubble_sort([4,3,5,0,1]))
